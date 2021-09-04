@@ -21,3 +21,12 @@ def get_data ():
             current = input(f'[{i}] = ')
             i += 1
         return data
+
+def is_integer_equivalent(n: float):
+    temp2 = n - int(n)
+    return temp2 == 0
+
+def print_float(n: float):
+    if is_integer_equivalent:
+        n = int(n)
+    return str(n)
