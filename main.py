@@ -19,4 +19,6 @@ while True:
     4 - Moda;
     ''')
     op = operations[choice]
-    op()
+    result = op()
+    if result is not None:
+        print(result)
