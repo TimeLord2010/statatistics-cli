@@ -11,6 +11,5 @@ def mode ():
     maximum = max(counter.values())
     for key in counter.keys():
         if counter[key] == maximum:
-            print(key)
-            return None
+            return key
     raise IndexError('Did not find maximum value in counter.')

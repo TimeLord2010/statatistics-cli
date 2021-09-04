@@ -7,8 +7,8 @@ def median ():
         i = (len(data) - 1) / 2
         lower = math.floor(i)
         upper = math.ceil(i)
-        print((float(data[lower]) + float(data[upper])) / 2)
+        return (float(data[lower]) + float(data[upper])) / 2
     else:
         i = len(data) / 2
         i = math.floor(i)
-        print(data[i])
+        return data[i]
