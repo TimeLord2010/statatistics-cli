@@ -1,3 +1,5 @@
+from standard_deviation import standard_deviation
+from variance import variance
 from average import average
 from frequency import frequency_distribuition
 from median import median
@@ -7,7 +9,9 @@ operations = {
     '1': frequency_distribuition,
     '2': average,
     '3': median,
-    '4': mode
+    '4': mode,
+    '5': variance,
+    '6': standard_deviation
 }
 
 while True:
@@ -17,6 +21,8 @@ while True:
     2 - Média;
     3 - Mediana;
     4 - Moda;
+    5 - Variância;
+    6 - Desvio padrão;
     ''')
     op = operations[choice]
     result = op()
