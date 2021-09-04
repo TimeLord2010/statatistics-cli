@@ -1,4 +1,4 @@
-from utils import get_data
+from utils import get_data, print_float
 import pandas as pd
 import math
 import matplotlib.pyplot as plt
@@ -15,8 +15,7 @@ def create_frequency_distribuition (counter: dict):
     plt.bar(counter.keys(), counter.values())
     plt.show()
 
-def frequency_for_categorized ():
-    data = get_data()
+def frequency_for_categorized (data):
     counter = {}
     for d in data:
         if d in counter:
@@ -25,8 +24,7 @@ def frequency_for_categorized ():
             counter[d] = 1
     create_frequency_distribuition(counter)
 
-def frequency_for_quantitative ():
-    data = get_data()
+def frequency_for_quantitative (data):
     data = [float(x) for x in data]
     n = len(data)
     k = math.sqrt(n)
@@ -36,17 +34,14 @@ def frequency_for_quantitative ():
     while _min <= max(data):
         lower = _min - (amplitude/2)
         upper = _min + (amplitude/2)
-        classes[f'{lower} - {upper}'] = len([x for x in data if lower <= x <= upper])
+        classes[f'{print_float(lower)} - {print_float(upper)}'] = len([x for x in data if lower <= x <= upper])
         _min += amplitude
     create_frequency_distribuition(classes)
 
 def frequency_distribuition ():
-    data_type = input('''
-    Tipo de dado:
-    1 - Categorizado;
-    2 - Quantitativo.
-    ''')
-    if data_type == '1':
-        frequency_for_categorized()
+    data = get_data()
+    is_quantitative = all([x.isdigit() for x in data])
+    if is_quantitative:
+        frequency_for_quantitative(data)
     else:
-        frequency_for_quantitative()
+        frequency_for_categorized(data)
