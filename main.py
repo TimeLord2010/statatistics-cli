@@ -23,6 +23,7 @@ while True:
     4 - Moda;
     5 - Variância;
     6 - Desvio padrão;
+    7 - Funções de classes;
     ''')
     op = operations[choice]
     result = op()
