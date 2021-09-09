@@ -16,6 +16,7 @@ def average (data = None, is_regular = None):
         if data is None:
             print('formato: valor*peso')
             data = get_data()
-        data = [x.split('*') for x in data]
+        if len(data) > 0 and isinstance(data[0], str):
+            data = [x.split('*') for x in data]
         avg = sum([float(val)*float(weight) for (val, weight) in data]) / sum([x for (_, x) in data])
     return avg
