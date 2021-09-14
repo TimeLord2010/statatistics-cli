@@ -6,7 +6,7 @@ def get_data ():
     if file_or_keyboard == '1':
         fileName = input('Nome do arquivo: ')
         content = ''
-        with open(fileName, 'r', encoding='utf8') as f:
+        with open('resources/' + fileName, 'r', encoding='utf8') as f:
             content = f.readlines()
         content = [x.replace("\n", '').strip() for x in content]
         return content
