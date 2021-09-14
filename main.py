@@ -1,4 +1,4 @@
-from class_average import class_functions
+from class_functions import class_functions
 from standard_deviation import standard_deviation
 from variance import variance
 from average import average
