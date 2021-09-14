@@ -1,3 +1,4 @@
+from class_average import class_functions
 from standard_deviation import standard_deviation
 from variance import variance
 from average import average
@@ -11,7 +12,8 @@ operations = {
     '3': median,
     '4': mode,
     '5': variance,
-    '6': standard_deviation
+    '6': standard_deviation,
+    '7': class_functions
 }
 
 while True:
