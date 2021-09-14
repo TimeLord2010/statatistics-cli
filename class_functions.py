@@ -12,9 +12,10 @@ def class_data ():
         t.append((point, float(quantity)))
     return t
 
-def class_average ():
+def class_average (pairs = None):
     sum_of_values = 0
-    pairs = class_data()
+    if pairs is None:
+        pairs = class_data()
     for (point, quantity) in pairs:
         sum_of_values += point * quantity
     n = sum([q for (_, q) in pairs])
@@ -23,7 +24,8 @@ def class_average ():
 def class_variance ():
     pairs = class_data()
     data = [x for (x, _) in pairs]
-    return variance(data, lambda i: pairs[i][1])
+    avg = class_average(pairs)
+    return variance(data, ponderation = lambda i: pairs[i][1], avg = avg, is_populational= True)
 
 def class_functions ():
     choice = input('''
