@@ -1,5 +1,6 @@
 from variance import variance
 from utils import get_data
+from math import sqrt
 
 def class_data ():
     print('formato: <menor>-<maior>|<quantidade> ')
@@ -27,6 +28,10 @@ def class_variance ():
     avg = class_average(pairs)
     return variance(data, ponderation = lambda i: pairs[i][1], avg = avg, is_populational= True)
 
+def class_standard_deviation ():
+    variance = class_variance()
+    return sqrt(variance)
+
 def class_functions ():
     choice = input('''
     1 - Média;
@@ -38,4 +43,4 @@ def class_functions ():
     elif choice == '2':
         return class_variance()
     else:
-        pass
+        return class_standard_deviation()
