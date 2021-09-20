@@ -7,6 +7,9 @@ from frequency import frequency_distribuition
 from median import median
 from mode import mode
 from distribution_form import distribution_form
+from relative_position import relative_position
+from chebyshev_theorem import chebyshev_theorem
+from rule_of_thumb import rule_of_thumb
 
 operations = {
     '1': frequency_distribuition,
@@ -16,7 +19,10 @@ operations = {
     '5': variance,
     '6': standard_deviation,
     '7': class_functions,
-    '8': distribution_form
+    '8': distribution_form,
+    '9': relative_position,
+    '10': chebyshev_theorem,
+    '11': rule_of_thumb
 }
 
 while True:
