@@ -1,7 +1,7 @@
 from utils import get_data
 import math
 
-def average (data = None, is_regular = None):
+def average (data = None, is_regular = '1'):
     if is_regular is None:
         is_regular = input('''
         1 - Regular;
