@@ -22,6 +22,10 @@ def get_data ():
             i += 1
         return data
 
+def get_float_data ():
+    data = get_data()
+    return [float(x) for x in data]
+
 def is_integer_equivalent(n: float):
     temp2 = n - int(n)
     return temp2 == 0
