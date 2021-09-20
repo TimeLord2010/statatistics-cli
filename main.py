@@ -1,3 +1,4 @@
+from distribution_form import distribution_form
 from class_functions import class_functions
 from standard_deviation import standard_deviation
 from variance import variance
@@ -5,6 +6,7 @@ from average import average
 from frequency import frequency_distribuition
 from median import median
 from mode import mode
+from distribution_form import distribution_form
 
 operations = {
     '1': frequency_distribuition,
@@ -13,7 +15,8 @@ operations = {
     '4': mode,
     '5': variance,
     '6': standard_deviation,
-    '7': class_functions
+    '7': class_functions,
+    '8': distribution_form
 }
 
 while True:
@@ -26,6 +29,11 @@ while True:
     5 - Variância;
     6 - Desvio padrão;
     7 - Funções de classes;
+    8 - Forma da distribuição;
+    9 - Posição relativa;
+    10 - Teorema de Chebyshev;
+    11 - Regra empírica;
+    12 - Detecção de valores atípicos;
     ''')
     op = operations[choice]
     result = op()
